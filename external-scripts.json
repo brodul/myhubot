@@ -8,6 +8,6 @@
   "hubot-redis-brain",
   "hubot-rules",
   "hubot-auth",
-  "hubot-",
+  "hubot-reload-scripts",
   "hubot-shipit"
 ]
