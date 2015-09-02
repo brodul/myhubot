@@ -152,9 +152,7 @@ from `external-scripts.json` and you don't need to worry about redis at all.
 
 ## Adapters
 
-TODO
-
-describe irc
+This hubot uses primarily the IRC adapter for its functionality.
 
 Adapters are the interface to the service you want your hubot to run on, such
 as Campfire or IRC. There are a number of third party adapters that the
@@ -176,8 +174,12 @@ Where `<adapter>` is the name of your adapter without the `hubot-` prefix.
 
 ## Deployment
 
-TODO
+Myhubot is run in supervisor. Here is an example of the config `/etc/supervisor/conf.d/hubot.conf` .
 
-add supervisor file
+    [program:hubot]
+    command=/home/hubot/myhubot/bin/hubot -a irc
+    directory=/home/hubot/myhubot
+    user=hubot
+    environment=HOME='/home/hubot'
 
 [deploy-unix]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
