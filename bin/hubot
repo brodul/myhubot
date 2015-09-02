@@ -7,5 +7,5 @@ export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
 
 
 # how to parse an ini file in bash :D
-python3 unittest populate_envs.py
+python3 populate_envs.py
 exec node_modules/.bin/hubot --name "YouThere" "$@"
