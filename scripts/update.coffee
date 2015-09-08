@@ -17,7 +17,7 @@ crypto = require 'crypto'
 
 module.exports = (robot) ->
 
-  robot.router.post "/hubot/update/gihub_hook", (req, res) ->
+  robot.router.post "/hubot/update/github_hook", (req, res) ->
 
     # should be more DRY
     user = {}
