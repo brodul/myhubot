@@ -26,13 +26,15 @@ module.exports = (robot) ->
 
     try
       raw_payload = req.body.payload
+      console.log raw_payload
       payload = JSON.parse raw_payload
       github_secret = process.env.HUBOT_UPDATE_GITHUB_SECRET
 
       # validate push hook
       hmac = crypto.createHmac("sha1", github_secret)
       hmac.update(raw_payload)
-      if "sha1=#{hmac.digest('hex')}" isnt req.headers['X-Hub-Signature']
+      digest = hmac.digest('hex')
+      if "sha1=#{digest}" isnt req.headers['X-Hub-Signature']
         robot.send user, "Auth error"
         console.log hexdigest
         console.log req.headers['X-Hub-Signature']
