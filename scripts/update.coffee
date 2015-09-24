@@ -25,7 +25,7 @@ module.exports = (robot) ->
     user.room = process.env.HUBOT_IRC_ROOMS
 
     try
-      raw_payload = req.body.payload
+      raw_payload = req.rawBody
       console.log raw_payload
       payload = JSON.parse raw_payload
       github_secret = process.env.HUBOT_UPDATE_GITHUB_SECRET
