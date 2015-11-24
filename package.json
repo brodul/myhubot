@@ -5,7 +5,7 @@
   "author": "brodul <brodul@brodul.org>",
   "description": "A simple helpful robot for your Company",
   "dependencies": {
-    "hubot": "^2.13.2",
+    "hubot": "git://github.com/brodul/hubot.git#rawbody",
     "hubot-auth": "^1.2.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.1.5",
@@ -19,7 +19,8 @@
     "hubot-reload-scripts": "^0.1.2",
     "hubot-rules": "^0.1.1",
     "hubot-scripts": "^2.16.1",
-    "hubot-shipit": "^0.2.0"
+    "hubot-shipit": "^0.2.0",
+    "request": "^2.64.0"
   },
   "engines": {
     "node": "0.10.x"
